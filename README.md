@@ -1,30 +1,30 @@
 <div align="center">
   
-  <img src="./public/img/logo-aidit-light.png" alt="AIDIT Logo" width="400"/>
+  <img src="./public/img/logo-aidit-dark.png" alt="AIDIT Logo" width="400"/>
   
   # AIDIT - AI Penetration Testing Assistant
   
   **Artificial Intelligence by Adit**
   
-  *AI-powered penetration testing assistant untuk analisis keamanan yang profesional*
+  *AI-powered penetration testing assistant for professional security analysis*
   
 </div>
 
-## 📋 Tentang AIDIT
+## 📋 About AIDIT
 
-AIDIT adalah aplikasi web berbasis AI yang dirancang khusus untuk membantu profesional keamanan siber dalam melakukan analisis kerentanan dan penetration testing. Aplikasi ini menyediakan asisten AI yang dapat membantu menganalisis kerentanan keamanan dengan format yang terstruktur dan profesional.
+AIDIT is an AI-powered web application specifically designed to assist cybersecurity professionals in performing vulnerability analysis and penetration testing. This application provides an AI assistant that can help analyze security vulnerabilities with structured and professional formatting.
 
-### ✨ Fitur Utama
+### ✨ Key Features
 
-- **🤖 AI Pentest Chat** - Chat interface untuk analisis keamanan dengan AI
-- **🎯 Tiga Mode Operasi**:
-  - **PRO Mode**: Analisis keamanan profesional dengan format terstruktur
-  - **LAB Mode**: Mode terisolasi untuk validasi RCE minimal di environment lab
-  - **LITE Mode**: Mode ringan untuk pertanyaan umum dan diskusi sederhana
-- **💬 Multi-Chat Management** - Kelola multiple chat sessions dengan riwayat tersimpan
-- **🎨 Theme Switching** - Dukungan tema terang/gelap dengan preferensi sistem
-- **💾 Local Storage** - Riwayat chat tersimpan otomatis di browser
-- **📝 Chat Management** - Rename dan hapus chat dengan mudah
+- **🤖 AI Pentest Chat** - Chat interface for security analysis with AI
+- **🎯 Three Operating Modes**:
+  - **PRO Mode**: Professional security analysis with structured format
+  - **LAB Mode**: Isolated mode for minimal RCE validation in lab environment
+  - **LITE Mode**: Lightweight mode for general questions and simple discussions
+- **💬 Multi-Chat Management** - Manage multiple chat sessions with saved history
+- **🎨 Theme Switching** - Light/dark theme support with system preference
+- **💾 Local Storage** - Chat history automatically saved in browser
+- **📝 Chat Management** - Easily rename and delete chats
 
 ## 🛠️ Tech Stack
 
@@ -38,11 +38,11 @@ AIDIT adalah aplikasi web berbasis AI yang dirancang khusus untuk membantu profe
 
 ## 📦 Prerequisites
 
-- **Node.js** (versi 18 atau lebih baru)
-- **npm** atau **yarn**
-- **Do AI Agent** endpoint dan access key
+- **Node.js** (version 18 or newer)
+- **npm** or **yarn**
+- **Do AI Agent** endpoint and access key
 
-## 🚀 Instalasi & Setup
+## 🚀 Installation & Setup
 
 ### 1. Clone Repository
 
@@ -57,79 +57,72 @@ cd aidit
 npm install
 ```
 
-### 3. Konfigurasi Environment
+### 3. Environment Configuration
 
-Buat file `.env.local` di root directory dan isi dengan konfigurasi berikut:
+Create a `.env.local` file in the root directory and fill it with the following configuration:
 
 ```env
-# Do AI Agent Configuration (untuk proxy Vite)
+# Do AI Agent Configuration (for Vite proxy)
 DO_AGENT_ENDPOINT=https://YOUR_AGENT_ID.agents.do-ai.run
 DO_AGENT_KEY=YOUR_AGENT_ACCESS_KEY
 
-# Opsional: Jika ingin menggunakan backend terpisah di production
+# Optional: If you want to use a separate backend in production
 # VITE_AGENT_API_URL=https://api.example.com/chat
 ```
 
-**Catatan**:
+**Note**: 
+- `DO_AGENT_ENDPOINT` and `DO_AGENT_KEY` are used by Vite proxy to avoid CORS
+- Do not use `VITE_` prefix for these variables to prevent exposure to client bundle
+- For production, consider using a separate backend proxy
 
-- `DO_AGENT_ENDPOINT` dan `DO_AGENT_KEY` digunakan oleh proxy Vite untuk menghindari CORS
-- Jangan gunakan prefix `VITE_` untuk variabel ini agar tidak ter-expose ke client bundle
-- Untuk production, pertimbangkan menggunakan backend proxy terpisah
-
-### 4. Jalankan Development Server
+### 4. Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Aplikasi akan berjalan di `http://localhost:3000`
+The application will run at `http://localhost:3000`
 
-### 5. Build untuk Production
+### 5. Build for Production
 
 ```bash
 npm run build
 ```
 
-File hasil build akan berada di folder `dist/`
+Build files will be in the `dist/` folder
 
-## 📖 Cara Penggunaan
+## 📖 Usage Guide
 
-### Mode PRO
+### PRO Mode
+- Use for professional security analysis
+- Output in structured format: Vulnerability Summary, Exploitability Analysis, Impact, Mitigation
+- Suitable for formal security reports
 
-- Gunakan untuk analisis keamanan profesional
-- Output dalam format terstruktur: Vulnerability Summary, Exploitability Analysis, Impact, Mitigation
-- Cocok untuk laporan keamanan formal
+### LAB Mode
+- Use only in isolated lab environment
+- Minimal RCE validation with one payload
+- Not for production or shared environments
 
-### Mode LAB
+### LITE Mode
+- Lightweight mode for general questions
+- Simpler answers without vulnerability analysis format
+- Suitable for quick discussions and general questions
 
-- Gunakan hanya di environment lab yang terisolasi
-- Validasi RCE minimal dengan satu payload
-- Tidak untuk production atau environment shared
-
-### Mode LITE
-
-- Mode ringan untuk pertanyaan umum
-- Jawaban lebih sederhana tanpa format vulnerability analysis
-- Cocok untuk diskusi cepat dan pertanyaan umum
-
-### Manajemen Chat
-
-- **New Chat**: Klik tombol "New Chat" di sidebar untuk membuat chat baru
-- **Rename Chat**: Hover pada chat di sidebar, klik icon pensil untuk rename
-- **Hapus Chat**: Hover pada chat di sidebar, klik icon trash untuk menghapus
-- **Switch Chat**: Klik pada chat di sidebar untuk membuka chat tersebut
+### Chat Management
+- **New Chat**: Click the "New Chat" button in the sidebar to create a new chat
+- **Rename Chat**: Hover over a chat in the sidebar, click the pencil icon to rename
+- **Delete Chat**: Hover over a chat in the sidebar, click the trash icon to delete
+- **Switch Chat**: Click on a chat in the sidebar to open that chat
 
 ### Toggle Mode
-
-- Klik dropdown "Mode" di sidebar (di atas dropdown tema)
-- Pilih antara PRO, LAB, atau LITE mode
+- Click the "Mode" dropdown in the sidebar (above the theme dropdown)
+- Choose between PRO, LAB, or LITE mode
 
 ### Toggle Theme
+- Click the "Tema" dropdown in the sidebar
+- Choose between System, Light, or Dark
 
-- Klik dropdown "Tema" di sidebar
-- Pilih antara System, Terang, atau Gelap
-
-## 🏗️ Struktur Project
+## 🏗️ Project Structure
 
 ```
 aidit/
@@ -146,7 +139,7 @@ aidit/
 │   └── geminiService.ts
 ├── public/             # Static assets
 │   └── img/           # Logo files
-├── prompts.ts         # AI prompts untuk berbagai mode
+├── prompts.ts         # AI prompts for various modes
 ├── types.ts           # TypeScript type definitions
 ├── App.tsx            # Main app component
 ├── index.tsx          # Entry point
@@ -155,78 +148,78 @@ aidit/
 
 ## 👨‍💻 Creator
 
-**AIDIT** dibuat oleh:
+**AIDIT** is created by:
 
-- **Nama**: Aditya Pratama
-- **Unit Kerja**: Layanan Data dan Sistem Informasi
-- **Institusi**: Universitas Pattimura
+- **Name**: Aditya Pratama
+- **Work Unit**: Layanan Data dan Sistem Informasi (Data Services and Information Systems)
+- **Institution**: Universitas Pattimura
 
-## 🤝 Kontribusi
+## 🤝 Contributing
 
-Kami sangat terbuka untuk kontribusi dari komunitas! AIDIT adalah proyek open source yang bertujuan untuk membantu komunitas keamanan siber.
+We are very open to contributions from the community! AIDIT is an open source project aimed at helping the cybersecurity community.
 
-### Cara Berkontribusi
+### How to Contribute
 
-1. **Fork** repository ini
-2. **Clone** fork Anda ke local machine
-3. **Buat branch** baru untuk fitur atau perbaikan (`git checkout -b feature/AmazingFeature`)
-4. **Commit** perubahan Anda (`git commit -m 'Add some AmazingFeature'`)
-5. **Push** ke branch (`git push origin feature/AmazingFeature`)
-6. **Buka Pull Request**
+1. **Fork** this repository
+2. **Clone** your fork to your local machine
+3. **Create** a new branch for your feature or fix (`git checkout -b feature/AmazingFeature`)
+4. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+5. **Push** to your branch (`git push origin feature/AmazingFeature`)
+6. **Open** a Pull Request
 
-### Area Kontribusi yang Dibutuhkan
+### Areas Where Contributions Are Needed
 
-- 🐛 **Bug Fixes** - Perbaikan bug dan error handling
-- ✨ **New Features** - Fitur baru yang dapat meningkatkan pengalaman pengguna
-- 📚 **Documentation** - Perbaikan dan penambahan dokumentasi
-- 🎨 **UI/UX Improvements** - Peningkatan antarmuka dan pengalaman pengguna
-- 🔒 **Security Enhancements** - Peningkatan keamanan aplikasi
-- 🌐 **Internationalization** - Dukungan multi-bahasa
-- ⚡ **Performance Optimization** - Optimasi performa aplikasi
-- 🧪 **Testing** - Penambahan unit tests dan integration tests
+- 🐛 **Bug Fixes** - Bug fixes and error handling improvements
+- ✨ **New Features** - New features that can enhance user experience
+- 📚 **Documentation** - Documentation improvements and additions
+- 🎨 **UI/UX Improvements** - Interface and user experience enhancements
+- 🔒 **Security Enhancements** - Application security improvements
+- 🌐 **Internationalization** - Multi-language support
+- ⚡ **Performance Optimization** - Application performance optimization
+- 🧪 **Testing** - Unit tests and integration tests additions
 
-### Guidelines untuk Kontribusi
+### Contribution Guidelines
 
-- Ikuti struktur kode yang sudah ada
-- Gunakan TypeScript untuk type safety
-- Tulis kode yang clean dan mudah dibaca
-- Tambahkan komentar untuk kode yang kompleks
-- Test perubahan Anda sebelum submit PR
-- Update dokumentasi jika diperlukan
+- Follow the existing code structure
+- Use TypeScript for type safety
+- Write clean and readable code
+- Add comments for complex code
+- Test your changes before submitting a PR
+- Update documentation if needed
 
-### Melaporkan Bug
+### Reporting Bugs
 
-Jika Anda menemukan bug, silakan buka [Issue](../../issues) dengan detail:
+If you find a bug, please open an [Issue](../../issues) with details:
 
-- Deskripsi bug
-- Langkah reproduksi
+- Bug description
+- Steps to reproduce
 - Expected behavior
 - Actual behavior
-- Screenshot (jika ada)
+- Screenshot (if available)
 - Environment (OS, Browser, Node version)
 
-### Request Fitur Baru
+### Requesting New Features
 
-Untuk request fitur baru, buka [Issue](../../issues) dengan label `enhancement` dan jelaskan:
+For new feature requests, open an [Issue](../../issues) with the `enhancement` label and describe:
 
-- Deskripsi fitur yang diinginkan
-- Use case dan manfaat
-- Mockup atau contoh (jika ada)
+- Description of the desired feature
+- Use case and benefits
+- Mockup or example (if available)
 
 ## 📝 License
 
-Proyek ini menggunakan license yang memungkinkan penggunaan dan modifikasi untuk tujuan pendidikan dan penelitian.
+This project uses a license that allows use and modification for educational and research purposes.
 
 ## 🙏 Acknowledgments
 
-- Do AI untuk API Agent yang powerful
-- DaisyUI untuk komponen UI yang elegant
-- React dan Vite communities untuk tools yang luar biasa
-- Semua kontributor yang telah membantu mengembangkan AIDIT
+- Do AI for the powerful Agent API
+- DaisyUI for elegant UI components
+- React and Vite communities for amazing tools
+- All contributors who have helped develop AIDIT
 
 ---
 
 <div align="center">
-  <p>Dibuat dengan ❤️ untuk komunitas keamanan siber Indonesia</p>
-  <p><strong>Mari bersama-sama membuat AIDIT lebih baik!</strong></p>
+  <p>Made with ❤️ for the cybersecurity community</p>
+  <p><strong>Let's make AIDIT better together!</strong></p>
 </div>

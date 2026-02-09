@@ -1,11 +1,13 @@
-# AIDIT - AI Penetration Testing Assistant
-
 <div align="center">
-  <img src="./public/img/logo-aidit-dark.png" alt="AIDIT Logo" width="200"/>
+  
+  <img src="./public/img/logo-aidit-dark.png" alt="AIDIT Logo" width="400"/>
+  
+  # AIDIT - AI Penetration Testing Assistant
   
   **Artificial Intelligence by Adit**
   
   *AI-powered penetration testing assistant untuk analisis keamanan yang profesional*
+  
 </div>
 
 ## 📋 Tentang AIDIT

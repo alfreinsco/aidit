@@ -1,0 +1,8 @@
+{
+  "name": "AIDIT - Artificial Intelligence by Adit",
+  "description": "A high-performance, multi-modal AI workspace powered by Gemini, featuring chat, image generation, and voice synthesis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

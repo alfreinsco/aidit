@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="./public/img/logo-aidit-dark.png" alt="AIDIT Logo" width="400"/>
+  <img src="./public/img/logo-aidit-light.png" alt="AIDIT Logo" width="400"/>
   
   # AIDIT - AI Penetration Testing Assistant
   
@@ -70,7 +70,8 @@ DO_AGENT_KEY=YOUR_AGENT_ACCESS_KEY
 # VITE_AGENT_API_URL=https://api.example.com/chat
 ```
 
-**Catatan**: 
+**Catatan**:
+
 - `DO_AGENT_ENDPOINT` dan `DO_AGENT_KEY` digunakan oleh proxy Vite untuk menghindari CORS
 - Jangan gunakan prefix `VITE_` untuk variabel ini agar tidak ter-expose ke client bundle
 - Untuk production, pertimbangkan menggunakan backend proxy terpisah
@@ -94,31 +95,37 @@ File hasil build akan berada di folder `dist/`
 ## 📖 Cara Penggunaan
 
 ### Mode PRO
+
 - Gunakan untuk analisis keamanan profesional
 - Output dalam format terstruktur: Vulnerability Summary, Exploitability Analysis, Impact, Mitigation
 - Cocok untuk laporan keamanan formal
 
 ### Mode LAB
+
 - Gunakan hanya di environment lab yang terisolasi
 - Validasi RCE minimal dengan satu payload
 - Tidak untuk production atau environment shared
 
 ### Mode LITE
+
 - Mode ringan untuk pertanyaan umum
 - Jawaban lebih sederhana tanpa format vulnerability analysis
 - Cocok untuk diskusi cepat dan pertanyaan umum
 
 ### Manajemen Chat
+
 - **New Chat**: Klik tombol "New Chat" di sidebar untuk membuat chat baru
 - **Rename Chat**: Hover pada chat di sidebar, klik icon pensil untuk rename
 - **Hapus Chat**: Hover pada chat di sidebar, klik icon trash untuk menghapus
 - **Switch Chat**: Klik pada chat di sidebar untuk membuka chat tersebut
 
 ### Toggle Mode
+
 - Klik dropdown "Mode" di sidebar (di atas dropdown tema)
 - Pilih antara PRO, LAB, atau LITE mode
 
 ### Toggle Theme
+
 - Klik dropdown "Tema" di sidebar
 - Pilih antara System, Terang, atau Gelap
 
@@ -190,6 +197,7 @@ Kami sangat terbuka untuk kontribusi dari komunitas! AIDIT adalah proyek open so
 ### Melaporkan Bug
 
 Jika Anda menemukan bug, silakan buka [Issue](../../issues) dengan detail:
+
 - Deskripsi bug
 - Langkah reproduksi
 - Expected behavior
@@ -200,6 +208,7 @@ Jika Anda menemukan bug, silakan buka [Issue](../../issues) dengan detail:
 ### Request Fitur Baru
 
 Untuk request fitur baru, buka [Issue](../../issues) dengan label `enhancement` dan jelaskan:
+
 - Deskripsi fitur yang diinginkan
 - Use case dan manfaat
 - Mockup atau contoh (jika ada)
